@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Шифр Цезаря</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1 style="padding-bottom: 100px">Шифр Цезаря</h1>
+            <div class="container">
+                <div class="column">
+                    <h2>Кодування</h2>
+                    <label for="encodeInput">Введіть текст:</label>
+                    <textarea id="encodeInput" rows="10" required></textarea>
+                    <label for="encodeKey">Введіть ключ:</label>
+                    <input
+                        type="number"
+                        id="encodeKey"
+                        min="1"
+                        value="1"
+                        max="32"
+                    />
+                    <button onclick="encode()">Зашифрувати</button>
+                    <label for="encodeOutput">Результат:</label>
+                    <textarea id="encodeOutput" rows="10" readonly></textarea>
+                </div>
+
+                <div class="column">
+                    <h2>Декодування</h2>
+                    <label for="decodeInput">Введіть текст:</label>
+                    <textarea id="decodeInput" rows="10" required></textarea>
+                    <label for="decodeKey">Введіть ключ:</label>
+                    <input
+                        type="number"
+                        id="decodeKey"
+                        min="1"
+                        value="1"
+                        max="32"
+                    />
+                    <button onclick="decode()">Дешифрувати</button>
+                    <label for="decodeOutput">Результат:</label>
+                    <textarea id="decodeOutput" rows="10" readonly></textarea>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
